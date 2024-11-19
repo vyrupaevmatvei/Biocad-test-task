@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: test-task-service
+  labels:
+    app: test
+spec:
+  selector:
+    app: test
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 32777  
+  type: NodePort
